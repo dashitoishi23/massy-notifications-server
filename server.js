@@ -7,7 +7,7 @@ app.use(express.json()); //ensures application/json as Content-Type header in cl
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use("/order-notifications", router);
+app.use("/order-notifications", router); //Add this route to WooCommerce webhook
 
 app.listen(1377, () => {
   console.log("Listening on 1377");
